@@ -104,18 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Optional: Add smooth scrolling
     controls.style.scrollBehavior = 'smooth';
-
-    // Optional: Add buttons to scroll left and right
-    const leftButton = document.createElement('button');
-    leftButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
-    leftButton.classList.add('scroll-button', 'left');
-    leftButton.onclick = () => controls.scrollBy({ left: -200, behavior: 'smooth' });
-
-    const rightButton = document.createElement('button');
-    rightButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
-    rightButton.classList.add('scroll-button', 'right');
-    rightButton.onclick = () => controls.scrollBy({ left: 200, behavior: 'smooth' });
-
-    controls.parentElement.insertBefore(leftButton, controls);
-    controls.parentElement.appendChild(rightButton);
 });
+
+function toggleControls() {
+    const controls = document.querySelector('.controls');
+    controls.classList.toggle('show');
+}
