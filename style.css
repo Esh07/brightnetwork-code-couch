@@ -175,7 +175,7 @@ button:hover .icon-hover {
   display: none;
 }
 
-.overlay span.location {
+.overlay a.location {
   position: absolute;
   top: 0;
   /*   width: 100%; */
