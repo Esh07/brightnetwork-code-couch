@@ -193,6 +193,11 @@ button:hover .icon-hover {
   justify-content: center;
 }
 
+.location-link {
+  height: 100%;
+  width: 100%;
+}
+
 .overlay-content-meta-content {
   display: flex;
   align-items: center;
