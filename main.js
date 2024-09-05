@@ -27,8 +27,8 @@ async function fetchImages(category = currentCategory) {
             overlay.className = "overlay";
             overlay.innerHTML = `
           <div class="overlay-content">
-            <span class="location"> <a href="https://unsplash.com/photos/${image.slug}" target="_blank" class="btn location-link"> View </a></span>
-             <div class="overlay-content-meta">
+            <a href="https://unsplash.com/photos/${image.slug}" target="_blank" class="location"> <span class="btn location-link"> View </span></a> 
+            <div class="overlay-content-meta">
              <div class="overlay-content-meta-content">
                <div class="auther">
                   <i class="fa-regular fa-user "></i>
