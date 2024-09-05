@@ -1,8 +1,5 @@
 
 async function fetchImages() {
-    const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_API_KEY;
-    const UNSPLASH_SECRET_KEY = process.env.UNSPLASH_SECRET_KEY;
-    console.log(UNSPLASH_ACCESS_KEY, UNSPLASH_SECRET_KEY);
     try {
         const response = await fetch('/api/fetchImages');
         if (!response.ok) {
