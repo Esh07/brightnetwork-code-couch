@@ -8,6 +8,8 @@ async function fetchImages() {
         const images = await response.json();
         const gallery = document.getElementById("gallery");
 
+        console.log("Images:", images);
+
         // Clear existing content
         gallery.innerHTML = "";
 
