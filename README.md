@@ -1,6 +1,8 @@
 # Image Gallery with Responsive Controls
 
 <img src="https://img.shields.io/badge/%27Code%20to%20Couch%202024%27-23?&style=for-the-badge&logoColor=%23004b50&label=BrightNetwork&labelColor=%23f58f46&color=%23004b50" />
+Deployed Website:
+https://brightnetwork-code-couch.vercel.app
 
 ## Overview
 
