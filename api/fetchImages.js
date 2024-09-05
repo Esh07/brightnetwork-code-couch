@@ -26,7 +26,7 @@ export default async function handler(req, res) {
         const query = queries[category] || 'India';
 
         // Fetch images from Unsplash using the search query
-        const response = await fetch(`https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&client_id=${process.env.UNSPLASH_ACCESS_KEY}&per_page=50`);
+        const response = await fetch(`https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&client_id=${process.env.UNSPLASH_ACCESS_KEY}&per_page=30`);
 
         // Check if response was successful
         if (!response.ok) {
