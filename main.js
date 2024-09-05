@@ -97,3 +97,25 @@ function shadeColor(color, percent) {
 
     return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const controls = document.querySelector('.controls');
+
+    // Optional: Add smooth scrolling
+    controls.style.scrollBehavior = 'smooth';
+
+    // Optional: Add buttons to scroll left and right
+    const leftButton = document.createElement('button');
+    leftButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
+    leftButton.classList.add('scroll-button', 'left');
+    leftButton.onclick = () => controls.scrollBy({ left: -200, behavior: 'smooth' });
+
+    const rightButton = document.createElement('button');
+    rightButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
+    rightButton.classList.add('scroll-button', 'right');
+    rightButton.onclick = () => controls.scrollBy({ left: 200, behavior: 'smooth' });
+
+    controls.parentElement.insertBefore(leftButton, controls);
+    controls.parentElement.appendChild(rightButton);
+});
