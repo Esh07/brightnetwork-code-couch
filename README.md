@@ -1,11 +1,12 @@
 # Image Gallery with Responsive Controls
 
-<small> **Bright**Network - Couch to Coder (2024) </small>
-![Couch to Coder by Bright Network](./img/banner-img.png)
+<img src="https://img.shields.io/badge/%27Code%20to%20Couch%202024%27-23?&style=for-the-badge&logoColor=%23004b50&label=BrightNetwork&labelColor=%23f58f46&color=%23004b50" />
 
 ## Overview
 
 This project is an image gallery that fetches images from the Unsplash API based on various categories. The gallery is designed to be responsive, with a hamburger menu for controls on smaller screens and a grid layout for the images.
+![Couch to Coder by Bright Network](./img/banner-img.png)
+
 
 ## Features
 
