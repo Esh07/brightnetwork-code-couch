@@ -1,3 +1,4 @@
+
 // api/fetchImages.js
 export default async function handler(req, res) {
     try {
@@ -44,16 +45,7 @@ export default async function handler(req, res) {
             id: image.id,
             url: image.urls.regular, // Regular size URL for optimal quality and performance
             author: image.user.name || "Unknown Author",
-            // local be like this "location": {
-            //     "name": "Jispa, Himachal Pradesh, India",
-            //     "city": "Jispa",
-            //     "country": "India",
-            //     "position": {
-            //         "latitude": 32.639016,
-            //         "longitude": 77.185181
-            //     }
-            // },
-            location: image.location,
+            slug: image.slug || null,
             publishedAt: image.created_at || null,
         }));
 
