@@ -1,7 +1,8 @@
+let currentCategory = 'India';
 
-async function fetchImages() {
+async function fetchImages(category = currentCategory) {
     try {
-        const response = await fetch('/api/fetchImages');
+        const response = await fetch(`/api/fetchImages?category=${encodeURIComponent(category)}`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -51,8 +52,26 @@ async function fetchImages() {
     }
 }
 
+// Attach event listeners to buttons
+document.addEventListener("DOMContentLoaded", () => {
+    fetchImages(currentCategory);
+
+    // Add event listeners to buttons
+    document.querySelectorAll('.controls button').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const category = event.target.textContent;
+            filterImages(category);
+        });
+    });
+});
+
+function filterImages(category) {
+    currentCategory = category;
+    fetchImages(`India ${category}`);
+}
+
 // Initialise the image fetch and slider setup
-document.addEventListener("DOMContentLoaded", fetchImages);
+document.addEventListener("DOMContentLoaded", fetchImages(currentCategory));
 
 // Function to generate a random color
 function getRandomColor() {
