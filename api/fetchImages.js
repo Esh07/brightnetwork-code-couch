@@ -25,8 +25,11 @@ export default async function handler(req, res) {
         // Use the query defined in the queries object, default to 'India'
         const query = queries[category] || 'India';
 
+        // Generate a random page number between 1 and 10
+        const randomPage = Math.floor(Math.random() * 10) + 1;
+
         // Fetch images from Unsplash using the search query
-        const response = await fetch(`https://api.unsplash.com/search/photos/random?query=${encodeURIComponent(query)}&client_id=${process.env.UNSPLASH_ACCESS_KEY}&per_page=30`);
+        const response = await fetch(`https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&client_id=${process.env.UNSPLASH_ACCESS_KEY}&per_page=30&page=${randomPage}&order_by=latest`);
 
         // Check if response was successful
         if (!response.ok) {
