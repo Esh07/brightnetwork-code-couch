@@ -1,9 +1,10 @@
 
 async function fetchImages() {
+    const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_API_KEY;
+    const UNSPLASH_SECRET_KEY = process.env.UNSPLASH_SECRET_KEY;
+    console.log(UNSPLASH_ACCESS_KEY, UNSPLASH_SECRET_KEY);
     try {
-        const response = await fetch(
-            "https://picsum.photos/v2/list?page=2&limit=20"
-        );
+        const response = await fetch('/api/fetchImages');
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -18,22 +19,23 @@ async function fetchImages() {
             galleryItem.className = "gallery-item";
 
             const img = document.createElement("img");
-            img.src = image.download_url;
+            img.src = image.url;
             img.alt = `Image by ${image.author}`;
             img.loading = "lazy";
+            img.className = "responsive-img";
 
             const overlay = document.createElement("div");
             overlay.className = "overlay";
             overlay.innerHTML = `
           <div class="overlay-content">
-            <span class="location"> <i class="fa-regular fa-location-dot"></i> Location, India</span>
+            <span class="location"> <i class="fa-regular fa-location-dot"></i> ${image.location}</span>
              <div class="overlay-content-meta">
              <div class="overlay-content-meta-content">
                <div class="auther">
                   <i class="fa-regular fa-user "></i>
-                  <h3>${image.author || "Unknown Author"}</h3>
+                  <h3>${image.author}</h3>
                  </div>
-                <span class="date">${new Date().toLocaleDateString()}</span>
+                <span class="date"> <i class="fa-regular fa-calendar"></i> ${image.publishedAt ? new Date(image.publishedAt).toLocaleDateString() : "Unknown Date"}</span>
             </div>
                  </div>
             
