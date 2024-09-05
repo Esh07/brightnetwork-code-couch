@@ -25,7 +25,7 @@ export default async function handler(req, res) {
         const query = queries[category] || 'India';
 
         // Fetch images from Unsplash using the search query
-        const response = await fetch(`https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&client_id=${process.env.UNSPLASH_ACCESS_KEY}&per_page=20`);
+        const response = await fetch(`https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&client_id=${process.env.UNSPLASH_ACCESS_KEY}&per_page=50`);
 
         // Check if response was successful
         if (!response.ok) {
@@ -44,7 +44,16 @@ export default async function handler(req, res) {
             id: image.id,
             url: image.urls.regular, // Regular size URL for optimal quality and performance
             author: image.user.name || "Unknown Author",
-            location: image.location?.name || "Unknown Location",
+            // local be like this "location": {
+            //     "name": "Jispa, Himachal Pradesh, India",
+            //     "city": "Jispa",
+            //     "country": "India",
+            //     "position": {
+            //         "latitude": 32.639016,
+            //         "longitude": 77.185181
+            //     }
+            // },
+            location: image.location,
             publishedAt: image.created_at || null,
         }));
 
