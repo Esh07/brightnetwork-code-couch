@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/5624a843-6806-42a4-9965-b16a9e2db3ec)# Image Gallery with Responsive Controls
+# Image Gallery with Responsive Controls
 
 <img src="https://img.shields.io/badge/%27Code%20to%20Couch%202024%27-23?&style=for-the-badge&logoColor=%23004b50&label=BrightNetwork&labelColor=%23f58f46&color=%23004b50" />
 Deployed Website:
