@@ -1,4 +1,4 @@
-# Image Gallery with Responsive Controls
+![image](https://github.com/user-attachments/assets/5624a843-6806-42a4-9965-b16a9e2db3ec)# Image Gallery with Responsive Controls
 
 <img src="https://img.shields.io/badge/%27Code%20to%20Couch%202024%27-23?&style=for-the-badge&logoColor=%23004b50&label=BrightNetwork&labelColor=%23f58f46&color=%23004b50" />
 Deployed Website:
@@ -76,3 +76,5 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 - [Unsplash](https://unsplash.com) for providing the API to fetch images.
 - [Font Awesome](https://fontawesome.com) for the icons used in the controls.
 - [Vercel](https://vercel.com) for hosting the project.
+- [CSS-Trick](https://css-tricks.com/how-to-favicon-in-2021/) for good pratice with Favicons!
+- https://realfavicongenerator.net/ perfect tool for generate favicons
