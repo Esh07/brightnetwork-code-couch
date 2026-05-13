@@ -43,7 +43,8 @@ Before you can run this application, you need to have the following:
    git clone https://github.com/esh07/brightnetwork-code-couch.git
    cd brightnetwork-code-couch
    ```
-2. Create a `.env` file in the root directory and add your Unsplash API access key:
+### Environment Variables
+2. Create a local `.env` file (do **not** commit this to git) in the root directory and add your Unsplash API access key:
    ```sh
    UNSPLASH_ACCESS_KEY=your_unsplash_access_key
    ```
@@ -59,7 +60,9 @@ Before you can run this application, you need to have the following:
    ```
 5. Deploy the project to Vercel:
    Go to [Vercel](https://vercel.com) and import the project from your GitHub repository. Follow the instructions to deploy the project.
-6. Once deployed, you can access the image gallery using the Vercel URL.
+6. Add Environment Variables on vercel deployent:<br />
+   Go to Project Settings → Environment Variables → Add
+7. Once deployed, you can access the image gallery using the Vercel URL.
 
 ## Project Structure
 
