@@ -1,14 +1,18 @@
 # Image Gallery with Responsive Controls
 
 <img src="https://img.shields.io/badge/%27Code%20to%20Couch%202024%27-23?&style=for-the-badge&logoColor=%23004b50&label=BrightNetwork&labelColor=%23f58f46&color=%23004b50" />
-Deployed Website:
-https://brightnetwork-code-couch.vercel.app
 
 ## Overview
 
-This project is an image gallery that fetches images from the Unsplash API based on various categories. The gallery is designed to be responsive, with a hamburger menu for controls on smaller screens and a grid layout for the images.
+Built as part of the **Bright Network Couch to Coder Bootcamp**.
+
+A responsive image gallery that fetches category-based photography from the 
+Unsplash API via a Vercel serverless function — keeping the API key out of 
+client-side code.
+
 ![Couch to Coder by Bright Network](./img/banner-img.png)
 
+**Live demo:** [view here](https://brightnetwork-code-couch.vercel.app)
 
 ## Features
 
